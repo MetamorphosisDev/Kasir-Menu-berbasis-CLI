@@ -29,28 +29,7 @@ Aplikasi kasir sederhana berbasis Command Line Interface (CLI) yang dibuat mengg
 * Looping (`while`, `for`)
 
 ## Cara Menjalankan
-
-1. Clone repository:
-
-```bash
-git clone <url-repository>
 ```
-
-2. Masuk ke folder project:
-
-```bash
-cd aplikasiCLIKasir
-```
-
-3. Jalankan program:
-
-```bash
-python aplikasi_Kasir_berbasis_CLI.py
-```
-
-Atau pada PowerShell:
-
-```powershell
 .\aplikasi_Kasir_berbasis_CLI.py
 ```
 
