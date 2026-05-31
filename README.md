@@ -20,7 +20,6 @@ Aplikasi kasir sederhana berbasis Command Line Interface (CLI) yang dibuat mengg
 * Python 3
 
 ## Struktur Data yang Digunakan
-
 * List
 * Nested List
 * Dictionary
@@ -45,9 +44,4 @@ Aplikasi kasir sederhana berbasis Command Line Interface (CLI) yang dibuat mengg
 ```
 
 ## Screenshot
-
-Tambahkan screenshot aplikasi di sini jika diperlukan.
-
-## Lisensi
-
-Project ini dibuat untuk tujuan pembelajaran dan pengembangan kemampuan pemrograman Python.
+---
