@@ -20,13 +20,21 @@ Python 3.14.3
 #
 
 
-## Struktur Data yang Digunakan
-* List
-* Nested List
-* Dictionary
-* Function
-* Conditional Statement (`if`, `elif`, `else`)
-* Looping (`while`, `for`)
+## Konsep Pemrograman yang Digunakan
+### Struktur Data
+- List
+- Nested List
+- Dictionary
+### Fungsi
+- Function
+### Percabangan
+- if
+- elif
+- else
+### Perulangan
+- for
+- while
+
 
 ## Cara Menjalankan
 ```
