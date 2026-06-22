@@ -1,5 +1,5 @@
 import time
-from Data_makan_minum import list_menuMakanMinum
+from Data.Data_makan_minum import list_menuMakanMinum
 
 pesanan = []
 riwayatPesanan = []
