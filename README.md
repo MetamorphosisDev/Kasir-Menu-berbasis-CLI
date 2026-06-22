@@ -34,6 +34,8 @@ Python 3.14.3
 ### Perulangan
 - for
 - while
+### Modul
+- Time
 
 
 ## Cara Menjalankan
