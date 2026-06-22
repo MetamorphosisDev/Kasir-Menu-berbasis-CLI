@@ -19,7 +19,6 @@ Aplikasi kasir sederhana berbasis Command Line Interface (CLI) yang dibuat mengg
 Python 3.14.3
 #
 
-
 ## Konsep Pemrograman yang Digunakan
 ### Struktur Data
 - List
@@ -40,7 +39,7 @@ Python 3.14.3
 
 ## Cara Menjalankan
 ```
-.\aplikasi_Kasir_berbasis_CLI.py
+.\main.py
 ```
 
 ## Menu Utama
