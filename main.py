@@ -1,4 +1,5 @@
 import time
+import datetime
 from Data.Data_makan_minum import list_menuMakanMinum
 
 pesanan = []
@@ -160,7 +161,15 @@ def clearData():
         time.sleep(2)
     else: 
         time.sleep(2)
-        riwayatPesanan.append({"namaPelanggan":nama_Pelanggan,"Telp":No_Telp_Pelanggan, "Pesanan":pesanan.copy()})
+        riwayatPesanan.append({
+        "waktu": datetime.datetime.now(),
+        "nama": nama_Pelanggan,
+        "telp": No_Telp_Pelanggan,
+        "items": pesanan.copy(),
+        "total": total,
+        "diskon": diskon,
+        "bayar": total - diskon
+    })
         pesanan.clear()
 
         total = 0
@@ -171,7 +180,33 @@ def clearData():
 
 
 def riwayatPesanan_data():
-    print(riwayatPesanan)
+    if not riwayatPesanan:
+        print("Belum ada riwayat transaksi.")
+        return
+    print("\n" + "="*70)
+    print("                RIWAYAT PEMESANAN")
+    print("="*70)
+    no_transaksi = 1
+    for trx in riwayatPesanan:
+        print(f"\nTransaksi #{no_transaksi}")
+        no_transaksi += 1
+
+        print(f"Waktu : {trx['waktu']}")
+        print(f"Nama  : {trx['nama']}")
+        print(f"Telp  : {trx['telp']}")
+        print("-"*70)
+
+        no_item = 1
+        for item in trx["items"]:
+            nama, harga, qty, subtotal = item
+            print(f"{no_item}. {nama} {qty} x Rp{harga} = Rp{subtotal}")
+            no_item += 1
+
+        print("-"*70)
+        print(f"Total  : Rp{trx['total']}")
+        print(f"Diskon : Rp{trx['diskon']}")
+        print(f"Bayar  : Rp{trx['bayar']}")
+        print("="*70)
 
 def main():
     while True:
