@@ -16,7 +16,7 @@ Aplikasi kasir sederhana berbasis Command Line Interface (CLI) yang dibuat mengg
 * 💰 Perhitungan total pembayaran dan diskon
 
 ## Versi Python
-* Python 3
+
 #
 
 
