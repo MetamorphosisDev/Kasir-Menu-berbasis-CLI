@@ -31,7 +31,8 @@ def tampilanPesanan():
     print("==================================")
     print("1. Tambah Pesanan")
     print("2. Hapus Pesanan")
-    print("3. List Pesanan")
+    print("3. Edit Pesanan")
+    print("4. List Pesanan")
     print("0. Keluar dari halaman ini")
     print("==================================")
 
@@ -75,6 +76,33 @@ def tambahPesanan():
                     No_number_second+=1
                     total += subtotal
                 print("="*65)
+
+def editPesanan():
+    if pesanan == []:
+        print("Pesanan Tidak Ada")
+        return
+    tampilkanPesan()
+    index = int(input(f"Pilih nomor pesanan yang ingin diedit (1-{len(pesanan)}): "))
+    if index < 1 or index > len(pesanan):
+        print("Nomor tidak valid")
+        return
+    
+    menu_Makanan_Minuman()
+    pilih_menu = int(input("Pilih menu baru: "))
+    if pilih_menu < 1 or pilih_menu > len(list_menuMakanMinum):
+        print("Menu tidak valid")
+        return
+
+    jumlah_baru = int(input("Masukkan jumlah baru: "))
+    nama_baru, harga_baru = list_menuMakanMinum[pilih_menu - 1]
+    subtotal_baru = harga_baru * jumlah_baru
+    pesanan[index - 1] = [
+        nama_baru,
+        harga_baru,
+        jumlah_baru,
+        subtotal_baru
+    ]
+    print(f"Pesanan berhasil diubah menjadi {nama_baru} x{jumlah_baru}")
 
 def hapusPesan():
     while True:
@@ -214,17 +242,23 @@ def main():
             pilihMenuKasir = int(input("Masukan Inputan : "))
             if (pilihMenuKasir == 1):
                 menu_Makanan_Minuman()
-            elif (pilihMenuKasir == 2): 
-                tampilanPesanan()
-                inputpesan = int(input("Masukan Inputan: "))
-                if (inputpesan == 1):
-                    tambahPesanan()
-                elif (inputpesan == 2):
-                    hapusPesan()
-                elif (inputpesan == 3):
-                    tampilkanPesan()
-                else:
-                    print("Masukan nilai yang benar")
+            elif (pilihMenuKasir == 2):
+                while True:
+                    tampilanPesanan()
+                    inputpesan = int(input("Masukan Inputan: "))
+                    if inputpesan == 1:
+                        tambahPesanan()
+                    elif inputpesan == 2:
+                        hapusPesan()
+                    elif inputpesan == 3:
+                        editPesanan()
+                    elif inputpesan == 4:
+                        tampilkanPesan()
+                    elif inputpesan == 0:
+                        break
+                    else:
+                        print("Masukan nilai yang benar")
+
             elif (pilihMenuKasir == 3):
                 cetakStruk()
             elif (pilihMenuKasir == 4):
